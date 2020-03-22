@@ -1,0 +1,70 @@
+From 3056127e1817b6eb598dcce1898b472edb9855dc Mon Sep 17 00:00:00 2001
+From: "Bernardo A. Rodrigues" <bernardo.araujo@iota.org>
+Date: Sun, 22 Mar 2020 15:07:02 +0100
+Subject: [PATCH] add LDFLAGS to Makefile
+
+---
+ Makefile | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 91d2d52..a18dbe6 100644
+--- a/Makefile
++++ b/Makefile
+@@ -6,7 +6,7 @@ CC           ?= $(CROSS_PREFIX)gcc
+ AR           ?= $(CROSS_PREFIX)ar
+ RANLIB       ?= $(CROSS_PREFIX)ranlib
+ SIZE         ?= $(CROSS_PREFIX)size
+-SHLIB        ?= $(CC) -shared
++SHLIB        ?= $(CC) $(LDFLAGS) -shared
+ 
+ SOVERSION    = 1
+ 
+@@ -43,34 +43,34 @@ all:	$(ALL)
+ lib:	$(LIB)
+ 
+ pigpio.o: pigpio.c pigpio.h command.h custom.cext
+-	$(CC) $(CFLAGS) -fpic -c -o pigpio.o pigpio.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -fpic -c -o pigpio.o pigpio.c
+ 
+ pigpiod_if.o: pigpiod_if.c pigpio.h command.h pigpiod_if.h
+-	$(CC) $(CFLAGS) -fpic -c -o pigpiod_if.o pigpiod_if.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -fpic -c -o pigpiod_if.o pigpiod_if.c
+ 
+ pigpiod_if2.o: pigpiod_if2.c pigpio.h command.h pigpiod_if2.h
+-	$(CC) $(CFLAGS) -fpic -c -o pigpiod_if2.o pigpiod_if2.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -fpic -c -o pigpiod_if2.o pigpiod_if2.c
+ 
+ command.o: command.c pigpio.h command.h
+-	$(CC) $(CFLAGS) -fpic -c -o command.o command.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -fpic -c -o command.o command.c
+ 
+ x_pigpio:	x_pigpio.o $(LIB1)
+-	$(CC) -o x_pigpio x_pigpio.o $(LL1)
++	$(CC) $(LDFLAGS) -o x_pigpio x_pigpio.o $(LL1)
+ 
+ x_pigpiod_if:	x_pigpiod_if.o $(LIB2)
+-	$(CC) -o x_pigpiod_if x_pigpiod_if.o $(LL2)
++	$(CC) $(LDFLAGS) -o x_pigpiod_if x_pigpiod_if.o $(LL2)
+ 
+ x_pigpiod_if2:	x_pigpiod_if2.o $(LIB3)
+-	$(CC) -o x_pigpiod_if2 x_pigpiod_if2.o $(LL3)
++	$(CC) $(LDFLAGS) -o x_pigpiod_if2 x_pigpiod_if2.o $(LL3)
+ 
+ pigpiod:	pigpiod.o $(LIB1)
+-	$(CC) -o pigpiod pigpiod.o $(LL1)
++	$(CC) $(LDFLAGS) -o pigpiod pigpiod.o $(LL1)
+ 
+ pigs:		pigs.o command.o
+-	$(CC) -o pigs pigs.o command.o
++	$(CC) $(LDFLAGS) -o pigs pigs.o command.o
+ 
+ pig2vcd:	pig2vcd.o
+-	$(CC) -o pig2vcd pig2vcd.o
++	$(CC) $(LDFLAGS) -o pig2vcd pig2vcd.o
+ 
+ clean:
+ 	rm -f *.o *.i *.s *~ $(ALL) *.so.$(SOVERSION)
+-- 
+2.7.4
+

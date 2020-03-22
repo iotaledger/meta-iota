@@ -1,0 +1,37 @@
+From a968bd96b515414a3201452658177cca9c67ea66 Mon Sep 17 00:00:00 2001
+From: "Bernardo A. Rodrigues" <bernardo.araujo@iota.org>
+Date: Sun, 22 Mar 2020 14:26:56 +0100
+Subject: [PATCH] soft assign compiler tools on Makefile
+
+---
+ Makefile | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 0aa14fe..d27ea7b 100644
+--- a/Makefile
++++ b/Makefile
+@@ -2,13 +2,13 @@
+ # Set CROSS_PREFIX to prepend to all compiler tools at once for easier
+ # cross-compilation.
+ CROSS_PREFIX =
+-CC           = $(CROSS_PREFIX)gcc
+-AR           = $(CROSS_PREFIX)ar
+-RANLIB       = $(CROSS_PREFIX)ranlib
+-SIZE         = $(CROSS_PREFIX)size
+-STRIP        = $(CROSS_PREFIX)strip
+-SHLIB        = $(CC) -shared
+-STRIPLIB     = $(STRIP) --strip-unneeded
++CC           ?= $(CROSS_PREFIX)gcc
++AR           ?= $(CROSS_PREFIX)ar
++RANLIB       ?= $(CROSS_PREFIX)ranlib
++SIZE         ?= $(CROSS_PREFIX)size
++STRIP        ?= $(CROSS_PREFIX)strip
++SHLIB        ?= $(CC) -shared
++STRIPLIB     ?= $(STRIP) --strip-unneeded
+ 
+ SOVERSION    = 1
+ 
+-- 
+2.7.4
+
