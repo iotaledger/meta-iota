@@ -1,0 +1,22 @@
+From 6880ea4d2b03713b78d99de12aef06e896d35f32 Mon Sep 17 00:00:00 2001
+From: "Bernardo A. Rodrigues" <bernardo.araujo@iota.org>
+Date: Mon, 18 May 2020 16:27:04 +0200
+Subject: [PATCH] add pthread to link libs
+
+---
+ CMakeLists.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 322886b..f85f763 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -80,4 +80,5 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
+   argtable3
+   linenoise
+   m # linenoise
++  pthread
+ )
+-- 
+2.17.1
+
