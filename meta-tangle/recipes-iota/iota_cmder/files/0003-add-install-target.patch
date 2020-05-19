@@ -1,0 +1,22 @@
+From 8f8c5f8d4ad73f086a2550bc9549b5c6e42a8172 Mon Sep 17 00:00:00 2001
+From: "Bernardo A. Rodrigues" <bernardo.araujo@iota.org>
+Date: Mon, 18 May 2020 16:31:20 +0200
+Subject: [PATCH] add install target
+
+---
+ CMakeLists.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index f85f763..8f811ab 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -82,3 +82,5 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
+   m # linenoise
+   pthread
+ )
++
++install(TARGETS ${CMAKE_PROJECT_NAME} DESTINATION "${CMAKE_INSTALL_PREFIX}/bin")
+-- 
+2.17.1
+

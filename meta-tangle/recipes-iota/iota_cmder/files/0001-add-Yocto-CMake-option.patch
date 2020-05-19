@@ -1,0 +1,101 @@
+From 33fe5ee0c43d6e4a215e55f3a611cb8462edef1e Mon Sep 17 00:00:00 2001
+From: "Bernardo A. Rodrigues" <bernardo.araujo@iota.org>
+Date: Mon, 18 May 2020 15:31:23 +0200
+Subject: [PATCH] add Yocto CMake option
+
+---
+ CMakeLists.txt | 64 +++++++++++++++++++++++++++++---------------------
+ 1 file changed, 37 insertions(+), 27 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c276f6e..322886b 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -7,36 +7,44 @@ project(iota_cmder DESCRIPTION "The IOTA commander")
+ enable_language(C)
+ enable_testing()
+ 
+-# fetch iota.c
+-include(FetchContent)
+-FetchContent_Declare(
+-  iota.c
+-  GIT_REPOSITORY http://github.com/iotaledger/iota.c.git
+-  GIT_TAG 959c1e20e7bc8660a736c9db7042264e1e79854f
+-)
++option(YOCTO "Enable Building in Yocto" OFF)
+ 
+-if(${CMAKE_VERSION} VERSION_LESS 3.14)
+-    macro(FetchContent_MakeAvailable NAME)
+-        FetchContent_GetProperties(${NAME})
+-        if(NOT ${NAME}_POPULATED)
+-            FetchContent_Populate(${NAME})
+-            add_subdirectory(${${NAME}_SOURCE_DIR} ${${NAME}_BINARY_DIR})
+-        endif()
+-    endmacro()
+-endif()
++if(NOT YOCTO)
++
++  # fetch iota.c
++  include(FetchContent)
++  FetchContent_Declare(
++    iota.c
++    GIT_REPOSITORY http://github.com/iotaledger/iota.c.git
++    GIT_TAG 959c1e20e7bc8660a736c9db7042264e1e79854f
++  )
+ 
+-message(STATUS "Fetching iota.c")
+-FetchContent_MakeAvailable(iota.c)
++  if(${CMAKE_VERSION} VERSION_LESS 3.14)
++      macro(FetchContent_MakeAvailable NAME)
++          FetchContent_GetProperties(${NAME})
++          if(NOT ${NAME}_POPULATED)
++              FetchContent_Populate(${NAME})
++              add_subdirectory(${${NAME}_SOURCE_DIR} ${${NAME}_BINARY_DIR})
++          endif()
++      endmacro()
++  endif()
+ 
+-# external libs module
+-include(ExternalProject)
++  message(STATUS "Fetching iota.c")
++  FetchContent_MakeAvailable(iota.c)
++
++  # external libs module
++  include(ExternalProject)
++
++endif()
+ 
+ # libs in the sandbox
+ link_directories("${CMAKE_INSTALL_PREFIX}/lib")
+ 
+-# external libs
+-include(cmake/argtable3.cmake)
+-include(cmake/linenoise.cmake)
++if(NOT YOCTO)
++  # external libs
++  include(cmake/argtable3.cmake)
++  include(cmake/linenoise.cmake)
++endif()
+ 
+ # your source files
+ add_executable(${CMAKE_PROJECT_NAME}
+@@ -52,10 +60,12 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
+   "${iota.c_SOURCE_DIR}"
+ )
+ 
+-add_dependencies(${CMAKE_PROJECT_NAME}
+-  "ext_argtable3"
+-  "ext_linenoise"
+-)
++if(NOT YOCTO)
++  add_dependencies(${CMAKE_PROJECT_NAME}
++    "ext_argtable3"
++    "ext_linenoise"
++  )
++endif()
+ 
+ target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC
+   cclient
+-- 
+2.17.1
+
