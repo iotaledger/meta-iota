@@ -54,6 +54,7 @@ RDEPENDS_packagegroup-honeycomb-development += " \
 "
 
 RDEPENDS_packagegroup-honeycomb-iota = " \
+                                       iota-cmder \
                                        hornet \
                                        hornetctl \
                                        goshimmer \
