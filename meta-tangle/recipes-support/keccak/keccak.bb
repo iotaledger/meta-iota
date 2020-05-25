@@ -5,14 +5,14 @@ LICENSE = "GPL-2.0"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0;md5=801f80980d171dd6425610833a22dbe6"
 
 SRC_URI = " \
-            git://github.com/XKCP/XKCP.git \
+            https://github.com/XKCP/XKCP/archive/a7a105cefc172178c3c9bb7e5f0768e0b226016b.tar.gz \
             file://0001-remove-native-gcc-options.patch \
 "
-SRCREV = "87944d97ee18978aa0ea8486edbb7acb08a8564a"
 
-PR = "r0"
+SRC_URI[md5sum] = "af2f1c33e8593fb3fc666f54419b06ef"
+SRC_URI[sha256sum] = "245418d6dd84c7eabfa77c93c5b0eff32c405e691048589bb8d6a253d139bfa3"
 
-S = "${WORKDIR}/git"
+S = "${WORKDIR}/XKCP-a7a105cefc172178c3c9bb7e5f0768e0b226016b"
 
 RDEPENDS_${PN}-dev = ""
 DEPENDS = "libxslt-native"
@@ -28,16 +28,10 @@ do_install() {
     install -m 0644 ${S}/bin/compact/libkeccak.a ${D}${libdir}
 
     ## install headers
-    # copy a bunch of stuff (including headers)
-
-    install -m 0755 -d ${D}${includedir}/keccak
-    cp -r ${S}/lib/* ${D}${includedir}/keccak
-
-    ## install headers
-    # delete everything that's not *.h
-    find ${D}${includedir}/keccak -type f -not -name '*.h' -print0 | xargs -0 -I {} rm -r {}
-
-    ## install headers
-    # place all headers in root keccak directory
-    find ${D}${includedir}/keccak -type f -name '*.h' -print0 | xargs -0 -I {} cp {} ${D}${includedir}/keccak
+    install -d ${D}${includedir}
+    cp -r ${S}/lib/high/Keccak/FIPS202/ ${D}${includedir}
+    cp ${S}/lib/low/KeccakP-1600/Reference/KeccakP-1600-SnP.h ${D}${includedir}
+    cp ${S}/lib/high/Keccak/KeccakSpongeWidth1600.h ${D}${includedir}
+    cp ${S}/lib/high/Keccak/KeccakSponge-common.h ${D}${includedir}
+    cp ${S}/lib/common/align.h ${D}${includedir}
 }
