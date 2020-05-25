@@ -17,7 +17,7 @@ SRC_URI = "\
     git://github.com/DaveGamble/cJSON.git \
 "
 
-SRCREV = "c69134d01746dcf551dd7724b4edb12f922eb0d1"
+SRCREV = "v${PV}"
 
 S = "${WORKDIR}/git"
 
