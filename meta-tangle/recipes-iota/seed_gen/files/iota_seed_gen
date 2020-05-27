@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+echo "-----------WARNING-----------"
+echo "This is an extremely unsafe way to manipulate an IOTA Seed!"
+echo "DO NOT DO THIS IN PRODUCTION!"
+echo "-----------WARNING-----------"
+echo ""
+echo "Here's your IOTA Seed:"
+seed=$(cat /dev/urandom 2> /dev/null | tr -dc A-Z9 2> /dev/null | head -c${1:-81})
+echo $seed
