@@ -1,4 +1,4 @@
-require ${PN}_${PV}.inc
+require ${PN}_0.4.0.inc
 
 inherit systemd
 
@@ -24,6 +24,16 @@ SYSTEMD_AUTO_ENABLE = "disable"
 
 # avoid cache disabling
 export GOCACHE = "${B}/.cache"
+
+do_compile_prepend(){
+
+    # fix sha3 import error: https://stackoverflow.com/questions/48635662/code-in-directory-expects-import
+    sed -i '$ d' src/github.com/iotaledger/iota.go/kerl/sha3/doc.go
+    echo "package sha3" >> src/github.com/iotaledger/iota.go/kerl/sha3/doc.go
+
+    # rm tests
+    rm -rf src/github.com/gohornet/hornet/pkg/model/coordinator/test
+}
 
 do_install_append(){
 

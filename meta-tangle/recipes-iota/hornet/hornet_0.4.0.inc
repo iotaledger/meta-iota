@@ -94,9 +94,10 @@ SRC_URI += "\
            git://github.com/valyala/fasttemplate.git;protocol=https;name=fasttemplate;destsuffix=${PN}-${PV}/src/github.com/valyala/fasttemplate;nobranch=1 \
            git://github.com/uber-go/atomic.git;protocol=https;name=atomic;destsuffix=${PN}-${PV}/src/go.uber.org/atomic;nobranch=1 \
            git://github.com/golang/sys.git;protocol=https;name=sys;destsuffix=${PN}-${PV}/src/golang.org/x/sys;nobranch=1 \
+	   git://github.com/etcd-io/bbolt.git;protocol=https;name=bbolt;destsuffix=${PN}-${PV}/src/go.etcd.io/bbolt;nobranch=1 \
 "
 
-SRCREV_hornet = "v${PV}-rc8"
+SRCREV_hornet = "v0.4.0-rc11"
 
 # hornet deps
 SRCREV_xxhash = "v1.1.0"
@@ -111,8 +112,8 @@ SRCREV_go-github = "v17.0.0"
 SRCREV_go-querystring = "v1.0.0"
 SRCREV_go-version = "v1.2.0"
 SRCREV_websocket = "v1.4.2"
-SRCREV_hive.go = "8da1ccad46059b75cbaf11685d3b30c6a51b5a4d"
-SRCREV_iota.go = "dfb0acdec2406a6beb5816fb5d96cbd328f2151e"
+SRCREV_hive.go = "06bf0dc5c0efb61bc7d11bd7425cd6cb8eaf7a02"
+SRCREV_iota.go = "3dfaebe62d8b4037de292cd9c0bbd1a6027a9873"
 SRCREV_echo = "v4.1.15"
 SRCREV_mapstructure = "v1.2.2"
 SRCREV_errors = "v0.9.1"
@@ -165,6 +166,7 @@ SRCREV_viper = "v1.6.2"
 SRCREV_zap = "v1.13.0"
 SRCREV_base58 = "v1.1.3"
 SRCREV_ed25519 = "29f6767a7c3efd210de1289dd6260a46b7e9d63d"
+SRCREV_bbolt = "v1.3.4"
 
 # viper deps
 SRCREV_fsnotify = "v1.4.9"
