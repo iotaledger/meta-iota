@@ -54,11 +54,9 @@ do_install_append(){
     # populate systemd service file
     install -m 0755 ${WORKDIR}/hornet.service ${D}${systemd_system_unitdir}
 
-    # populate environment file (for .deb)
-    if ["${PACKAGE_CLASSES}" == "package_deb"]; then
-        install -m 0755 -d ${D}${sysconfdir}/default
-        install -m 0755 ${WORKDIR}/hornet.env ${D}${sysconfdir}/default/hornet
-    fi
+    # populate environment file
+    install -m 0755 -d ${D}${sysconfdir}/default
+    install -m 0755 ${WORKDIR}/hornet.env ${D}${sysconfdir}/default/hornet
 }
 
 pkg_postinst_ontarget_${PN}(){
