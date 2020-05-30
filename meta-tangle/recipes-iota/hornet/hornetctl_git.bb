@@ -19,7 +19,7 @@ do_install(){
     install -m 0755 ${S}/hornet_clean_export ${D}${bindir}
     install -m 0755 ${S}/hornet_dashboard ${D}${bindir}
     install -m 0755 ${S}/hornet_neighbors ${D}${bindir}
-    install -m 0755 ${S}/hornetctl ${D}${bindir}
+    install -m 0755 ${S}/hornet_control ${D}${bindir}
     install -m 0755 ${S}/hornet_network ${D}${bindir}
     install -m 0755 ${S}/hornet_status ${D}${bindir}
 }
