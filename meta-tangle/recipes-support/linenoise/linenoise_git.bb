@@ -1,6 +1,6 @@
 DESCRIPTION = "A minimal, zero-config, BSD licensed, readline replacement."
 LICENSE = "BSD-2-Clause"
-LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/BSD-2-Clause;md5=8bef8e6712b1be5aa76af1ebde9d6378"
+LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/BSD-2-Clause;md5=cb641bc04cda31daea161b1bc15da69f"
 
 SRC_URI = "git://github.com/antirez/linenoise.git;protocol=https"
 SRCREV = "4a961c0108720741e2683868eb10495f015ee422"
