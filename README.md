@@ -24,11 +24,11 @@ The OpenEmbedded layer for the <a href="https://www.iota.org/" target="blank">IO
  </tr>
  <tr>
    <td><a href="https://honeycombOS.github.io">honeycombOS</a></td>
-   <td><a href="https://yocto-ci.resin.io/job/meta-raspberrypi1"> <img src="https://yocto-ci.resin.io/job/meta-raspberrypi1/badge/icon?style=flat-square"> </a></td>
-   <td><a href="https://yocto-ci.resin.io/job/meta-raspberrypi1"> <img src="https://yocto-ci.resin.io/job/meta-raspberrypi1/badge/icon?style=flat-square"> </a></td>
-   <td><a href="https://yocto-ci.resin.io/job/meta-raspberrypi1"> <img src="https://yocto-ci.resin.io/job/meta-raspberrypi1/badge/icon?style=flat-square"> </a></td>
-   <td><a href="https://yocto-ci.resin.io/job/meta-raspberrypi1"> <img src="https://yocto-ci.resin.io/job/meta-raspberrypi1/badge/icon?style=flat-square"> </a></td>
-   <td><a href="https://yocto-ci.resin.io/job/meta-raspberrypi1"> <img src="https://yocto-ci.resin.io/job/meta-raspberrypi1/badge/icon?style=flat-square"> </a></td>
+   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/honeycombOS-stm32mp1/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=honeycombOS-stm32mp1'></a></a></td>
+   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/honeycombOS-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=honeycombOS-raspberrypi4'></a></td>
+   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/honeycombOS-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=honeycombOS-raspberrypi3'></a></td>
+   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/honeycombOS-rock64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=honeycombOS-rock64'></a></td>
+   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/honeycombOS-genericx86-64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=honeycombOS-genericx86-64'></a></td>
  </tr>
  <tr>
    <td><a href="https://github.com/gohornet/hornet">HORNET</a></td>
