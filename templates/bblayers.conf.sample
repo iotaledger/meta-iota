@@ -1,0 +1,56 @@
+# changes incompatibly
+LCONF_VERSION = "7"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+
+# Convenience variables usable in various configuration fragments
+#----------------------------------
+METADIR  := "${@os.path.abspath('##OEROOT##/../..')}"
+
+# These are the core OE + YP Layers
+#----------------------------------
+YOCTO_LAYERS ?= " \
+  ${METADIR}/poky/meta \
+  ${METADIR}/poky/meta-poky \
+"
+
+# These are the IOTA layers
+#----------------------------------
+IOTA_LAYERS ?= " \
+  ${METADIR}/meta-iota/meta-tangle \
+  ${METADIR}/meta-iota/meta-honeycomb \
+"
+
+# These are the direct dependencies of the IOTA Layers
+#---------------------------------------------------------
+IOTA_DEPENDENCY_LAYERS ?= " \
+  ${METADIR}/meta-openembedded/meta-oe \
+  ${METADIR}/meta-openembedded/meta-networking \
+  ${METADIR}/meta-openembedded/meta-python \
+  ${METADIR}/meta-openembedded/meta-webserver \
+"
+
+# These are the BSP Layers
+#----------------------------------
+BSP_LAYERS ?= " \
+  ${METADIR}/poky/meta-yocto-bsp \
+  ${METADIR}/meta-raspberrypi \
+  ${METADIR}/meta-rock64 \
+  ${METADIR}/meta-st-stm32mp \
+"
+
+####################
+# Combine the layers
+
+BBLAYERS ?= " \
+  ${YOCTO_LAYERS} \
+  ${IOTA_LAYERS} \
+  ${IOTA_DEPENDENCY_LAYERS} \
+  ${BSP_LAYERS} \
+"
+
+BBLAYERS_NON_REMOVABLE ?= " \
+  ${METADIR}/meta \
+  ${METADIR}/meta-yocto \
+"
