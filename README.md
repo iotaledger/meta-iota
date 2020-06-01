@@ -40,11 +40,11 @@ The OpenEmbedded layer for the <a href="https://www.iota.org/" target="blank">IO
  </tr>
  <tr>
    <td><a href="https://github.com/iotaledger/goshimmer">GoShimmer</a></td>
-   <td><a href="https://yocto-ci.resin.io/job/meta-raspberrypi1"> <img src="https://yocto-ci.resin.io/job/meta-raspberrypi1/badge/icon?style=flat-square"> </a></td>
-   <td><a href="https://yocto-ci.resin.io/job/meta-raspberrypi1"> <img src="https://yocto-ci.resin.io/job/meta-raspberrypi1/badge/icon?style=flat-square"> </a></td>
-   <td><a href="https://yocto-ci.resin.io/job/meta-raspberrypi1"> <img src="https://yocto-ci.resin.io/job/meta-raspberrypi1/badge/icon?style=flat-square"> </a></td>
-   <td><a href="https://yocto-ci.resin.io/job/meta-raspberrypi1"> <img src="https://yocto-ci.resin.io/job/meta-raspberrypi1/badge/icon?style=flat-square"> </a></td>
-   <td><a href="https://yocto-ci.resin.io/job/meta-raspberrypi1"> <img src="https://yocto-ci.resin.io/job/meta-raspberrypi1/badge/icon?style=flat-square"> </a></td>
+   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-stm32mp1/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-stm32mp1'></a></td>
+   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-raspberrypi4'></a></td>
+   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-raspberrypi3'></a></td>
+   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-rock64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-rock64'></a></td>
+   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-genericx86-64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-genericx86-64'></a></td>
  </tr>
  <tr>
    <td><a href="https://github.com/iotaledger/iota.c">iota.c</a></td>
