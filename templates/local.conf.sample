@@ -1,6 +1,6 @@
 MACHINE ??= "qemux86-64"
 
-DISTRO = "honeycomb"
+DISTRO ?= "honeycomb"
 INHERIT += "rm_work"
 
 DL_DIR ?= "${TOPDIR}/../downloads"
