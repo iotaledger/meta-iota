@@ -71,7 +71,7 @@ The <a href="https://yoctoproject.org">Yocto</a> / <a href="http://www.openembed
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota_cmder-genericx86-64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota_cmder-genericx86-64'></a></td>
  </tr>
 </table>
-
+<p align="center">Note: <a href="https://wiki.yoctoproject.org/wiki/Releases">Yocto Release</a> used in the builds: <b>warrior</b></p>
 <br>
 
 ---
