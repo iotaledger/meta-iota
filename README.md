@@ -4,7 +4,7 @@
 </h1>
 
 <h3 align="center">
-The OpenEmbedded layer for the <a href="https://www.iota.org/" target="blank">IOTA Distributed Ledger</a>.
+The <a href="https://yoctoproject.org">Yocto</a> / <a href="http://www.openembedded.org">OpenEmbedded</a> layer for the <a href="https://www.iota.org/" target="blank">IOTA Distributed Ledger</a>.
 </h3>
 
 <p align="center">
