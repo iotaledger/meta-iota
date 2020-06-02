@@ -40,7 +40,7 @@ The <a href="https://yoctoproject.org">Yocto</a> / <a href="http://www.openembed
  </tr>
  <tr>
    <td>[Node] <a href="https://github.com/iotaledger/goshimmer">GoShimmer</a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-stm32mp1/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-stm32mp1'></a></td>
+   <td align="center">32 bits not supported</td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-raspberrypi4'></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-raspberrypi3'></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-rock64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-rock64'></a></td>
