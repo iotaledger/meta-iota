@@ -23,7 +23,7 @@ The <a href="https://yoctoproject.org">Yocto</a> / <a href="http://www.openembed
    <th><a href="http://git.yoctoproject.org/cgit/cgit.cgi/meta-yocto/tree/meta-yocto-bsp/conf/machine/genericx86-64.conf?h=master">x86-64</a></th>
  </tr>
  <tr>
-   <td><a href="https://honeycombOS.github.io">honeycombOS</a></td>
+   <td>[OS]  <a href="https://honeycombOS.github.io">honeycombOS</a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/honeycombOS-stm32mp1/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=honeycombOS-stm32mp1'></a></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/honeycombOS-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=honeycombOS-raspberrypi4'></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/honeycombOS-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=honeycombOS-raspberrypi3'></a></td>
@@ -31,7 +31,7 @@ The <a href="https://yoctoproject.org">Yocto</a> / <a href="http://www.openembed
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/honeycombOS-genericx86-64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=honeycombOS-genericx86-64'></a></td>
  </tr>
  <tr>
-   <td><a href="https://github.com/gohornet/hornet">HORNET</a></td>
+   <td>[Node] <a href="https://github.com/gohornet/hornet">HORNET</a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/hornet-stm32mp1/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=hornet-stm32mp1'></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/hornet-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=hornet-raspberrypi4'></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/hornet-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=hornet-raspberrypi3'></a></td>
@@ -39,7 +39,7 @@ The <a href="https://yoctoproject.org">Yocto</a> / <a href="http://www.openembed
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/hornet-genericx86-64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=hornet-genericx86-64'></a></td>
  </tr>
  <tr>
-   <td><a href="https://github.com/iotaledger/goshimmer">GoShimmer</a></td>
+   <td>[Node] <a href="https://github.com/iotaledger/goshimmer">GoShimmer</a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-stm32mp1/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-stm32mp1'></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-raspberrypi4'></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-raspberrypi3'></a></td>
@@ -47,7 +47,7 @@ The <a href="https://yoctoproject.org">Yocto</a> / <a href="http://www.openembed
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-genericx86-64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-genericx86-64'></a></td>
  </tr>
  <tr>
-   <td><a href="https://github.com/iotaledger/iota.c">iota.c</a></td>
+   <td>[Client Lib] <a href="https://github.com/iotaledger/iota.c">iota.c</a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.c-stm32mp1/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.c-stm32mp1'></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.c-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.c-raspberrypi4'></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.c-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.c-raspberrypi3'></a></td>
@@ -55,7 +55,7 @@ The <a href="https://yoctoproject.org">Yocto</a> / <a href="http://www.openembed
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.c-genericx86-64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.c-genericx86-64'></a></td>
  </tr>
  <tr>
-   <td><a href="https://github.com/iotaledger/iota.py">iota.py</a></td>
+   <td>[Client Lib] <a href="https://github.com/iotaledger/iota.py">iota.py</a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.py-stm32mp1/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.py-stm32mp1'></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.py-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.py-raspberrypi4'></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.py-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.py-raspberrypi3'></a></td>
@@ -63,7 +63,7 @@ The <a href="https://yoctoproject.org">Yocto</a> / <a href="http://www.openembed
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.py-genericx86-64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.py-genericx86-64'></a></td>
  </tr>
  <tr>
-   <td><a href="https://github.com/oopsmonk/iota_cmder">IOTA Commander</a></td>
+   <td>[Client] <a href="https://github.com/oopsmonk/iota_cmder">IOTA Commander</a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota_cmder-stm32mp1/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota_cmder-stm32mp1'></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota_cmder-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota_cmder-raspberrypi4'></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota_cmder-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota_cmder-raspberrypi3'></a></td>
