@@ -63,7 +63,7 @@ The <a href="https://yoctoproject.org">Yocto</a> / <a href="http://www.openembed
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.py-genericx86-64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.py-genericx86-64'></a></td>
  </tr>
  <tr>
-   <td>[Client] <a href="https://github.com/oopsmonk/iota_cmder">IOTA Commander</a></td>
+   <td>[Client App] <a href="https://github.com/oopsmonk/iota_cmder">IOTA Commander</a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota_cmder-stm32mp1/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota_cmder-stm32mp1'></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota_cmder-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota_cmder-raspberrypi4'></a></td>
    <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota_cmder-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota_cmder-raspberrypi3'></a></td>
