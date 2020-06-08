@@ -95,12 +95,18 @@ SRC_URI += "\
            git://github.com/uber-go/atomic.git;protocol=https;name=atomic;destsuffix=${PN}-${PV}/src/go.uber.org/atomic;nobranch=1 \
            git://github.com/golang/sys.git;protocol=https;name=sys;destsuffix=${PN}-${PV}/src/golang.org/x/sys;nobranch=1 \
 	   git://github.com/etcd-io/bbolt.git;protocol=https;name=bbolt;destsuffix=${PN}-${PV}/src/go.etcd.io/bbolt;nobranch=1 \
+	   git://github.com/prometheus/client_golang.git;protocol=https;name=prometheus;destsuffix=${PN}-${PV}/src/github.com/prometheus/client_golang;nobranch=1 \
+	   git://github.com/beorn7/perks.git;protocol=https;name=perks;destsuffix=${PN}-${PV}/src/github.com/beorn7/perks;nobranch=1 \
+	   git://github.com/prometheus/client_model.git;protocol=https;name=client_model;destsuffix=${PN}-${PV}/src/github.com/prometheus/client_model;nobranch=1 \
+	   git://github.com/prometheus/common.git;protocol=https;name=common;destsuffix=${PN}-${PV}/src/github.com/prometheus/common;nobranch=1 \
+	   git://github.com/matttproud/golang_protobuf_extensions.git;protocol=https;name=golang_protobuf_extensions;destsuffix=${PN}-${PV}/src/github.com/matttproud/golang_protobuf_extensions;nobranch=1 \
+	   git://github.com/prometheus/procfs.git;protocol=https;name=procfs;destsuffix=${PN}-${PV}/src/github.com/prometheus/procfs;nobranch=1 \
 "
 
-SRCREV_hornet = "v0.4.0-rc11"
+SRCREV_hornet = "v0.4.0"
 
 # hornet deps
-SRCREV_xxhash = "v1.1.0"
+SRCREV_xxhash = "v2.1.1"
 SRCREV_badger = "v2.0.1"
 SRCREV_paho.mqtt = "0d940dd29fd24f905cd16b28b1209b4977b97e1a"
 SRCREV_hmq = "55f1f1aa8001b422e4e648cf8240a2bdf0dbfd52"
@@ -124,6 +130,7 @@ SRCREV_net = "1c781a10960ae16c34a899a47d78ad79ab36fd61"
 SRCREV_go-latest = "e3007ae9052ed85144087e7392e4c3fbc07962fa"
 SRCREV_go-metro = "280f6062b5bc97ee9b9afe7f2ccb361e59845baa"
 SRCREV_atomic = "v1.5.1"
+SRCREV_prometheus = "v1.6.0"
 
 # echo deps
 SRCREV_jwt-go = "v3.2.0"
@@ -231,3 +238,12 @@ SRCREV_fasttemplate = "v1.0.1"
 
 # fsnotify deps
 SRCREV_sys = "aed5e4c7ecf9f069775e08834fb724544628d38d"
+
+# prometheus deps
+SRCREV_perks = "v1.0.1"
+SRCREV_client_model = "v0.2.0"
+SRCREV_common = "v0.9.1"
+SRCREV_procfs = "v0.0.11"
+
+# common deps
+SRCREV_golang_protobuf_extensions = "v1.0.1"
