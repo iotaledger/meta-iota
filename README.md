@@ -24,51 +24,51 @@ The <a href="https://yoctoproject.org">Yocto</a> / <a href="http://www.openembed
  </tr>
  <tr>
    <td>[OS]  <a href="https://honeycombOS.github.io">honeycombOS</a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/honeycombOS-stm32mp1/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=honeycombOS-stm32mp1'></a></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/honeycombOS-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=honeycombOS-raspberrypi4'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/honeycombOS-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=honeycombOS-raspberrypi3'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/honeycombOS-rock64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=honeycombOS-rock64'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/honeycombOS-genericx86-64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=honeycombOS-genericx86-64'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/honeycombOS-stm32mp1/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=honeycombOS-stm32mp1'></a></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/honeycombOS-raspberrypi4/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=honeycombOS-raspberrypi4'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/honeycombOS-raspberrypi3/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=honeycombOS-raspberrypi3'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/honeycombOS-rock64/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=honeycombOS-rock64'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/honeycombOS-genericx86-64/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=honeycombOS-genericx86-64'></a></td>
  </tr>
  <tr>
    <td>[Node] <a href="https://github.com/gohornet/hornet">HORNET</a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/hornet-stm32mp1/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=hornet-stm32mp1'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/hornet-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=hornet-raspberrypi4'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/hornet-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=hornet-raspberrypi3'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/hornet-rock64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=hornet-rock64'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/hornet-genericx86-64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=hornet-genericx86-64'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/hornet-stm32mp1/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=hornet-stm32mp1'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/hornet-raspberrypi4/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=hornet-raspberrypi4'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/hornet-raspberrypi3/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=hornet-raspberrypi3'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/hornet-rock64/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=hornet-rock64'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/hornet-genericx86-64/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=hornet-genericx86-64'></a></td>
  </tr>
  <tr>
    <td>[Node] <a href="https://github.com/iotaledger/goshimmer">GoShimmer</a></td>
    <td align="center">32 bits not supported</td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-raspberrypi4'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-raspberrypi3'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-rock64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-rock64'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/goshimmer-genericx86-64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=goshimmer-genericx86-64'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/goshimmer-raspberrypi4/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=goshimmer-raspberrypi4'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/goshimmer-raspberrypi3/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=goshimmer-raspberrypi3'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/goshimmer-rock64/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=goshimmer-rock64'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/goshimmer-genericx86-64/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=goshimmer-genericx86-64'></a></td>
  </tr>
  <tr>
    <td>[Client Lib] <a href="https://github.com/iotaledger/iota.c">iota.c</a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.c-stm32mp1/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.c-stm32mp1'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.c-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.c-raspberrypi4'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.c-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.c-raspberrypi3'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.c-rock64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.c-rock64'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.c-genericx86-64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.c-genericx86-64'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/iota.c-stm32mp1/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota.c-stm32mp1'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/iota.c-raspberrypi4/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota.c-raspberrypi4'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/iota.c-raspberrypi3/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota.c-raspberrypi3'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/iota.c-rock64/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota.c-rock64'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/iota.c-genericx86-64/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota.c-genericx86-64'></a></td>
  </tr>
  <tr>
    <td>[Client Lib] <a href="https://github.com/iotaledger/iota.py">iota.py</a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.py-stm32mp1/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.py-stm32mp1'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.py-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.py-raspberrypi4'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.py-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.py-raspberrypi3'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.py-rock64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.py-rock64'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota.py-genericx86-64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota.py-genericx86-64'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/iota.py-stm32mp1/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota.py-stm32mp1'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/iota.py-raspberrypi4/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota.py-raspberrypi4'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/iota.py-raspberrypi3/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota.py-raspberrypi3'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/iota.py-rock64/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota.py-rock64'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/iota.py-genericx86-64/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota.py-genericx86-64'></a></td>
  </tr>
  <tr>
    <td>[Client App] <a href="https://github.com/oopsmonk/iota_cmder">IOTA Commander</a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota_cmder-stm32mp1/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota_cmder-stm32mp1'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota_cmder-raspberrypi4/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota_cmder-raspberrypi4'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota_cmder-raspberrypi3/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota_cmder-raspberrypi3'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota_cmder-rock64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota_cmder-rock64'></a></td>
-   <td><a href='http://honeycomb-ci.ydns.eu:8080/job/iota_cmder-genericx86-64/'><img src='http://honeycomb-ci.ydns.eu:8080/buildStatus/icon?job=iota_cmder-genericx86-64'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/iota_cmder-stm32mp1/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota_cmder-stm32mp1'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/iota_cmder-raspberrypi4/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota_cmder-raspberrypi4'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/iota_cmder-raspberrypi3/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota_cmder-raspberrypi3'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/iota_cmder-rock64/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota_cmder-rock64'></a></td>
+   <td><a href='http://honeycombOS.iota.cafe:8080/job/iota_cmder-genericx86-64/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota_cmder-genericx86-64'></a></td>
  </tr>
 </table>
 <p align="center">Note: <a href="https://wiki.yoctoproject.org/wiki/Releases">Yocto Release</a> used in the builds: <b>warrior</b></p>
