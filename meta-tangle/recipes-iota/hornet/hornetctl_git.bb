@@ -4,7 +4,7 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10"
 
 SRC_URI = "git://github.com/honeycombOS/hornetctl.git;protocol=https"
-SRCREV = "${AUTOREV}"
+SRCREV = "1a6913b002ffb4b857e4ad9201597aeaf47cd32c"
 
 S = "${WORKDIR}/git"
 
@@ -15,11 +15,5 @@ do_install(){
     install -m 0755 -d ${D}${bindir}
 
     # install hornet helper scripts
-    install -m 0755 ${S}/hornet_clean_db ${D}${bindir}
-    install -m 0755 ${S}/hornet_clean_export ${D}${bindir}
-    install -m 0755 ${S}/hornet_dashboard ${D}${bindir}
-    install -m 0755 ${S}/hornet_neighbors ${D}${bindir}
-    install -m 0755 ${S}/hornet_control ${D}${bindir}
-    install -m 0755 ${S}/hornet_network ${D}${bindir}
-    install -m 0755 ${S}/hornet_status ${D}${bindir}
+    install -m 0755 ${S}/hornetctl ${D}${bindir}
 }
