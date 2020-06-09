@@ -4,7 +4,7 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10"
 
 SRC_URI = "git://github.com/honeycombOS/goshimmerctl.git;protocol=https"
-SRCREV = "c3a3a5ef39dacfbcfb74b920c246a9e7704bc9ba"
+SRCREV = "2697019a6d73b471d229e44c2bd7b95042c97369"
 
 S = "${WORKDIR}/git"
 
