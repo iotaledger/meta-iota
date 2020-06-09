@@ -4,7 +4,7 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10"
 
 SRC_URI = "git://github.com/honeycombOS/hornetctl.git;protocol=https"
-SRCREV = "108ba111702e6a1561be726b67438fa48296a1b5"
+SRCREV = "ab9d0d82d78d3e877f75a27c8d3194e466dbbfb9"
 
 S = "${WORKDIR}/git"
 
