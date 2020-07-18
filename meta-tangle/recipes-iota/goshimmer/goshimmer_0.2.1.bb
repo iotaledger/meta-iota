@@ -27,6 +27,9 @@ do_compile_prepend(){
     rm -rf ${S}/src/github.com/iotaledger/goshimmer/dapps/valuetransfers/packages/test
     rm -rf ${S}/src/github.com/iotaledger/goshimmer/packages/binary/messagelayer/test
 
+    # not using docker
+    rm -rf ${S}/src/github.com/iotaledger/goshimmer/tools/docker-network
+
 }
 
 do_install_append(){
