@@ -1,4 +1,4 @@
-SUMMARY = "IOTA Access."
+SUMMARY = "IOTA Access Server Reference Implementation."
 DESCRIPTION = "IOTA Access is a framework for decentralized access control."
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10"
@@ -12,7 +12,20 @@ S = "${WORKDIR}/git"
 
 inherit cmake pkgconfig
 
+DEPENDS = "access-sdk pigpio"
+
 AUTH = "eddsa"
 POL = "json"
 
-EXTRA_OECMAKE = "-DCMAKE_INSTALL_PREFIX=$PWD/ext_install -DAUTH_FLAVOUR=${AUTH} -DPOLICY_FORMAT=${POL}"
+EXTRA_OECMAKE = "-DCMAKE_INSTALL_PREFIX=$PWD/ext_install -DAUTH_FLAVOUR=${AUTH} -DPOLICY_FORMAT=${POL} "
+
+do_configure_prepend() {
+    rm -rf ${S}/access-sdk
+
+    # there's a separate recipe for access-sdk
+    sed -i '/add_subdirectory(access-sdk)/d' ${S}/CMakeLists.txt
+
+    # there's a separate recipe for pigpio
+    sed -i '36,43d' ${S}/CMakeLists.txt
+    sed -i '70,72d' ${S}/CMakeLists.txt
+}
