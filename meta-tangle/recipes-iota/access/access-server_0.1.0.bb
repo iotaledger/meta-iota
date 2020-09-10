@@ -12,7 +12,7 @@ S = "${WORKDIR}/git"
 
 inherit cmake pkgconfig
 
-DEPENDS = "access-sdk pigpio"
+DEPENDS = "libfastjson pigpio"
 
 AUTH = "eddsa"
 POL = "json"
@@ -20,12 +20,15 @@ POL = "json"
 EXTRA_OECMAKE = "-DCMAKE_INSTALL_PREFIX=$PWD/ext_install -DAUTH_FLAVOUR=${AUTH} -DPOLICY_FORMAT=${POL} "
 
 do_configure_prepend() {
-    rm -rf ${S}/access-sdk
-
-    # there's a separate recipe for access-sdk
-    sed -i '/add_subdirectory(access-sdk)/d' ${S}/CMakeLists.txt
+    cp -r ${S}/access-sdk ${B}
 
     # there's a separate recipe for pigpio
     sed -i '36,43d' ${S}/CMakeLists.txt
     sed -i '70,72d' ${S}/CMakeLists.txt
 }
+
+do_install(){
+    install -d ${D}${bindir}
+    install -m 0755 ${B}/asri ${D}${bindir}
+}
+
