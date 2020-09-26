@@ -12,23 +12,35 @@ S = "${WORKDIR}/git"
 
 inherit cmake pkgconfig
 
-DEPENDS = "libfastjson pigpio"
+DEPENDS = "libfastjson pigpio "
 
-AUTH = "eddsa"
-POL = "json"
-
-EXTRA_OECMAKE = "-DCMAKE_INSTALL_PREFIX=$PWD/ext_install -DAUTH_FLAVOUR=${AUTH} -DPOLICY_FORMAT=${POL} "
+EXTRA_OECMAKE = "-DCMAKE_INSTALL_PREFIX=$PWD/ext_install "
 
 do_configure_prepend() {
+
+    # temporary workaround
+    # todo: gitsm when public
+    cp -r /home/bernardo/access-sdk ${S}
     cp -r ${S}/access-sdk ${B}
+
+    # allow CMake 3.14 workaround
+    sed -i 's/16/14/g' ${S}/CMakeLists.txt
 
     # there's a separate recipe for pigpio
     sed -i '36,43d' ${S}/CMakeLists.txt
     sed -i '70,72d' ${S}/CMakeLists.txt
+
 }
 
 do_install(){
+
+    # install executable
     install -d ${D}${bindir}
     install -m 0755 ${B}/asri ${D}${bindir}
+
+    # install config.ini
+    install -m 0755 -d ${D}${sysconfdir}/access-server
+    install -m 0644 ${S}/config.ini ${D}${sysconfdir}/access-server
+
 }
 
