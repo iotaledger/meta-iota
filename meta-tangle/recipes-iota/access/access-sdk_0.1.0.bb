@@ -3,10 +3,9 @@ DESCRIPTION = "IOTA Access is a framework for decentralized access control."
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10"
 
-SRC_URI = "git:///home/bernardo/access-sdk;protocol=file"
+SRC_URI = "git:///home/bernardo/access-sdk;protocol=file;nobranch=1"
 
-# tag v0.1.0
-SRCREV = "5151e825c728dacd780648ee9aee1bfcb39e06e1"
+SRCREV = "v0.1.0-alpha"
 
 S = "${WORKDIR}/git"
 
@@ -14,10 +13,7 @@ inherit cmake pkgconfig
 
 DEPENDS = "libfastjson libcommon"
 
-AUTH = "eddsa"
-POL = "json"
-
-EXTRA_OECMAKE = "-DCMAKE_INSTALL_PREFIX=$PWD/ext_install -DAUTH_FLAVOUR=${AUTH} -DPOLICY_FORMAT=${POL} -DCMAKE_NO_SYSTEM_FROM_IMPORTED=1"
+EXTRA_OECMAKE = "-DCMAKE_INSTALL_PREFIX=$PWD/ext_install -DCMAKE_NO_SYSTEM_FROM_IMPORTED=1"
 
 do_install() {
 
