@@ -1,0 +1,26 @@
+From 443702d22c67c94af204e3ccc86a1bbaf37d7f84 Mon Sep 17 00:00:00 2001
+From: "Bernardo A. Rodrigues" <bernardo.araujo@iota.org>
+Date: Tue, 6 Oct 2020 17:26:55 +0200
+Subject: [PATCH] fix cmake install rpath
+
+---
+ CMakeLists.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 0df1b90..f443c23 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -23,6 +23,9 @@ project(access_reference_implementation)
+ 
+ set(CMAKE_C_STANDARD 99)
+ 
++set(CMAKE_INSTALL_RPATH "$ORIGIN")
++set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
++
+ # fetch access-sdk
+ include(FetchContent)
+ FetchContent_Declare(
+-- 
+2.17.1
+
