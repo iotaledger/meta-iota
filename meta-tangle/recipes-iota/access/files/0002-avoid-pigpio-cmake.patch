@@ -1,0 +1,41 @@
+From 90ed68cbe140bbe2bd93534a9afacf6aa8d859ab Mon Sep 17 00:00:00 2001
+From: "Bernardo A. Rodrigues" <bernardo.araujo@iota.org>
+Date: Tue, 6 Oct 2020 17:45:51 +0200
+Subject: [PATCH] avoid pigpio cmake
+
+---
+ CMakeLists.txt | 11 -----------
+ 1 file changed, 11 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index f443c23..ae40630 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -34,14 +34,6 @@ FetchContent_Declare(
+   GIT_TAG 072cd0593dfd9f74e8182a02947731b0053de597
+ )
+ 
+-# fetch pigpio
+-include(FetchContent)
+-FetchContent_Declare(
+-  pigpio
+-  GIT_REPOSITORY https://github.com/joan2937/pigpio.git
+-  GIT_TAG b6fe5874516eb67745fa6277d2060b715dac09a9
+-)
+-
+ # fetch sqlite-amalgamation
+ include(FetchContent)
+ FetchContent_Declare(
+@@ -79,9 +71,6 @@ endif()
+ message(STATUS "Fetching access-sdk")
+ FetchContent_MakeAvailable(access-sdk)
+ 
+-message(STATUS "Fetching pigpio")
+-FetchContent_MakeAvailable(pigpio)
+-
+ message(STATUS "Fetching sqlite3")
+ FetchContent_MakeAvailable(sqlite3)
+ 
+-- 
+2.17.1
+

@@ -1,0 +1,39 @@
+From 776f655610b0d48fab2e958315a94ec5ec4243ff Mon Sep 17 00:00:00 2001
+From: "Bernardo A. Rodrigues" <bernardo.araujo@iota.org>
+Date: Tue, 6 Oct 2020 17:51:35 +0200
+Subject: [PATCH] config ini path
+
+---
+ config.ini | 2 +-
+ main.c     | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/config.ini b/config.ini
+index 8657d6e..fe3e9a7 100644
+--- a/config.ini
++++ b/config.ini
+@@ -11,7 +11,7 @@ policy_store_service_port=6007
+ [wallet]
+ url=nodes.comnet.thetangle.org
+ seed=DEJUXV9ZQMIEXTWJJHJPLAWMOEKGAYDNALKSMCLG9APR9LCKHMLNZVCRFNFEPMGOBOYYIKJNYWSAKVPAI
+-pem_file_path=wallet_pem.txt
++pem_file_path=/etc/access-server/wallet_pem.txt
+ mwm=10
+ port=443
+ depth=3
+diff --git a/main.c b/main.c
+index d84ecc3..0872d3b 100644
+--- a/main.c
++++ b/main.c
+@@ -87,7 +87,7 @@ int main(int argc, char **argv) {
+   signal(SIGINT, signal_handler);
+   sigaction(SIGPIPE, &(struct sigaction){SIG_IGN}, NULL);
+ 
+-  config_manager_init("config.ini");
++  config_manager_init("/etc/access-server/config.ini");
+   config_manager_get_option_string("config", "client", client_name, MAX_CLIENT_NAME);
+ 
+   int status = config_manager_get_option_int("config", "thread_sleep_period", &g_task_sleep_time);
+-- 
+2.17.1
+
