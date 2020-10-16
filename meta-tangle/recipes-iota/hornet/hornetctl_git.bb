@@ -8,7 +8,7 @@ SRCREV = "3c5bad10b9102554dae8efb7ffd64d0527b2cf44"
 
 S = "${WORKDIR}/git"
 
-RDEPENDS_${PN} = " hornet python python3-pyyaml python3-urllib3"
+RDEPENDS_${PN} = " hornet python3 python3-pyyaml python3-urllib3"
 
 do_install(){
 
