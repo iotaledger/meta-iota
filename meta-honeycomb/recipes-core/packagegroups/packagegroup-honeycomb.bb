@@ -62,7 +62,7 @@ RDEPENDS_packagegroup-honeycomb-iota = " \
 RDEPENDS_packagegroup-honeycomb-cockpit = " \
                                             cockpit \
                                             cockpit-ws \
-                                            cockpit-system \
+                                            cockpit-systemd \
                                             cockpit-dashboard \
                                             cockpit-bridge \
                                             cockpit-pcp \
