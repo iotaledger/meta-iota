@@ -45,10 +45,6 @@ RDEPENDS_packagegroup-honeycomb-development += " \
                                         python3-dev \
                                         python3-pip \
                                         python3-setuptools \
-                                        python \
-                                        python-dev \
-                                        python-pip \
-                                        python-setuptools \
                                         go \
                                         go-runtime \
 "
@@ -66,7 +62,7 @@ RDEPENDS_packagegroup-honeycomb-iota = " \
 RDEPENDS_packagegroup-honeycomb-cockpit = " \
                                             cockpit \
                                             cockpit-ws \
-                                            cockpit-system \
+                                            cockpit-systemd \
                                             cockpit-dashboard \
                                             cockpit-bridge \
                                             cockpit-pcp \
