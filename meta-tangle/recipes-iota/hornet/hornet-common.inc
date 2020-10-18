@@ -10,6 +10,6 @@ DEPENDS = " bash"
 RDEPENDS_${PN} = "bash sudo"
 RDEPENDS_${PN}-dev = "bash sudo"
 
-inherit go pkgconfig
+inherit go go-mod pkgconfig
 GO_IMPORT = "github.com/gohornet/hornet"
 GO_LINKSHARED = ""
