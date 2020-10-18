@@ -8,7 +8,6 @@ PACKAGES = " \
              packagegroup-honeycomb-networking \
              packagegroup-honeycomb-development \
              packagegroup-honeycomb-iota \
-             packagegroup-honeycomb-cockpit \
 "
 
 RDEPENDS_packagegroup-honeycomb-misc = " \
