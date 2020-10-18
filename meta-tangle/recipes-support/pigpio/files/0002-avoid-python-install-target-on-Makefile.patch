@@ -1,0 +1,34 @@
+From 1eaeaf1bfd238d65d33d72411f28014e2fca52f5 Mon Sep 17 00:00:00 2001
+From: "Bernardo A. Rodrigues" <bernardo.araujo@iota.org>
+Date: Sun, 22 Mar 2020 14:46:38 +0100
+Subject: [PATCH] avoid python install target on Makefile
+
+---
+ Makefile | 4 ----
+ 1 file changed, 4 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index d27ea7b..e4c0a7d 100644
+--- a/Makefile
++++ b/Makefile
+@@ -103,8 +103,6 @@ install:	$(ALL)
+ 	install -m 0755 pig2vcd                        $(DESTDIR)$(bindir)
+ 	install -m 0755 pigpiod                        $(DESTDIR)$(bindir)
+ 	install -m 0755 pigs                           $(DESTDIR)$(bindir)
+-	if which python2; then python2 setup.py install $(PYINSTALLARGS); fi
+-	if which python3; then python3 setup.py install $(PYINSTALLARGS); fi
+ 	install -m 0755 -d                             $(DESTDIR)$(mandir)/man1
+ 	install -m 0644 p*.1                           $(DESTDIR)$(mandir)/man1
+ 	install -m 0755 -d                             $(DESTDIR)$(mandir)/man3
+@@ -126,8 +124,6 @@ uninstall:
+ 	rm -f $(DESTDIR)$(bindir)/pig2vcd
+ 	rm -f $(DESTDIR)$(bindir)/pigpiod
+ 	rm -f $(DESTDIR)$(bindir)/pigs
+-	if which python2; then python2 setup.py install $(PYINSTALLARGS) --record /tmp/pigpio >/dev/null; sed 's!^!$(DESTDIR)!' < /tmp/pigpio | xargs rm -f >/dev/null; fi
+-	if which python3; then python3 setup.py install $(PYINSTALLARGS) --record /tmp/pigpio >/dev/null; sed 's!^!$(DESTDIR)!' < /tmp/pigpio | xargs rm -f >/dev/null; fi
+ 	rm -f $(DESTDIR)$(mandir)/man1/pig*.1
+ 	rm -f $(DESTDIR)$(mandir)/man1/libpigpio*.1
+ 	rm -f $(DESTDIR)$(mandir)/man3/pig*.3
+-- 
+2.7.4
+
