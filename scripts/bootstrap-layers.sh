@@ -8,7 +8,7 @@
 mkdir -p ${HOME}/yocto
 cd ${HOME}/yocto
 
-BRANCH=warrior
+BRANCH=dunfell
 
 if [ ! -d meta-iota ]
 then
@@ -23,6 +23,11 @@ fi
 if [ ! -d meta-openembedded ]
 then
 	git clone https://github.com/openembedded/meta-openembedded.git -b $BRANCH
+fi
+
+if [ ! -d meta-rust ]
+then
+	git clone https://github.com/meta-rust/meta-rust.git -b $BRANCH
 fi
 
 if [ ! -d meta-raspberrypi ]
