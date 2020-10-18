@@ -6,7 +6,7 @@ DISTRO_VERSION = "0.4.0"
 
 MAINTAINER = "Bernardo A. Rodrigues <bernardo.araujo@iota.org>"
 
-GOVERSION = "1.14%"
+GOVERSION = "1.15%"
 
 DISTRO_FEATURES += " \
                    systemd \
