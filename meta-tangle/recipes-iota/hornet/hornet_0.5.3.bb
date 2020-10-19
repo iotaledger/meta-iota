@@ -59,6 +59,11 @@ do_install_append(){
     # populate environment file
     install -m 0755 -d ${D}${sysconfdir}/default
     install -m 0755 ${WORKDIR}/hornet.env ${D}${sysconfdir}/default/hornet
+
+    # rm go undesired artifacts
+    rm -f ${D}${bindir}/rand-addr
+    rm -f ${D}${bindir}/rand-seed
+
 }
 
 pkg_postinst_ontarget_${PN}(){
