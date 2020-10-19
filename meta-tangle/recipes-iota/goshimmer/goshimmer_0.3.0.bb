@@ -46,6 +46,15 @@ do_install_append(){
 
     # populate systemd service file
     install -m 0755 ${WORKDIR}/goshimmer.service ${D}${systemd_system_unitdir}
+
+    # rm go undesired artifacts
+    rm -rf ${D}${bindir}/double-spend
+    rm -rf ${D}${bindir}/genesis-snapshot
+    rm -rf ${D}${bindir}/rand-address
+    rm -rf ${D}${bindir}/rand-seed
+    rm -rf ${D}${bindir}/relay-checker
+    rm -rf ${D}${bindir}/spammer
+    
 }
 
 pkg_postinst_ontarget_${PN}(){
