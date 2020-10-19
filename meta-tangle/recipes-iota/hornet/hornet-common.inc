@@ -13,3 +13,6 @@ RDEPENDS_${PN}-dev = "bash sudo"
 inherit go go-mod pkgconfig
 GO_IMPORT = "github.com/gohornet/hornet"
 GO_LINKSHARED = ""
+
+GOBUILDFLAGS_append = " -modcacherw"
+export GO111MODULE = "on"
