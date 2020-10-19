@@ -17,3 +17,5 @@ IMAGE_INSTALL_append += "\
                           packagegroup-honeycomb-development \
                           packagegroup-honeycomb-iota \
 "
+
+IMAGE_ROOTFS_MAXSIZE_stm32mp1-disco = "3000000"
