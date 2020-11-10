@@ -8,7 +8,7 @@
 mkdir -p ${HOME}/yocto
 cd ${HOME}/yocto
 
-BRANCH=warrior
+BRANCH=dunfell
 
 if [ ! -d meta-iota ]
 then
