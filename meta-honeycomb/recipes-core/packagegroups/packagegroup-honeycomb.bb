@@ -10,11 +10,13 @@ PACKAGES = " \
              packagegroup-honeycomb-iota \
 "
 
+ROOTFS_MACHINE_BLACKLIST = "stm32mp1-disco"
+
 RDEPENDS_packagegroup-honeycomb-misc = " \
                                        sudo \
                                        useradd-beekeeper \
-                                       swapfile \
-                                       expand-rootfs \
+                                       ${@bb.utils.contains("MACHINE", "${ROOTFS_MACHINE_BLACKLIST}", "", "swapfile", d)} \
+                                       ${@bb.utils.contains("MACHINE", "${ROOTFS_MACHINE_BLACKLIST}", "", "expand-rootfs", d)} \
                                        screen \
                                        tmux \
                                        cronie \
