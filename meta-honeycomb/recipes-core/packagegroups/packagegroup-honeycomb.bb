@@ -50,17 +50,20 @@ RDEPENDS_packagegroup-honeycomb-development += " \
                                         go-runtime \
 "
 
-GOSHIMMER_MACHINE_BLACKLIST = "stm32mp1-disco"
-
 RDEPENDS_packagegroup-honeycomb-iota = " \
                                        seed-gen \
                                        iota-cmder \
                                        hornet \
                                        hornetctl \
-                                       ${@bb.utils.contains("MACHINE", "${GOSHIMMER_MACHINE_BLACKLIST}", "", "goshimmer", d)} \
-                                       ${@bb.utils.contains("MACHINE", "${GOSHIMMER_MACHINE_BLACKLIST}", "", "goshimmerctl", d)} \
+                                       goshimmer \
+                                       goshimmerctl \
                                        honeycomb-package-feeds \
 "
+
+RDEPENDS_packagegroup-honeycomb-iota_remove = "${@bb.utils.contains('MACHINE', 'stm32mp1-disco', '', 'goshimmer', d)}"
+RDEPENDS_packagegroup-honeycomb-iota_remove = "${@bb.utils.contains('MACHINE', 'stm32mp1-disco', '', 'goshimmerctl', d)}"
+RDEPENDS_packagegroup-honeycomb-iota_remove = "${@bb.utils.contains('MACHINE', 'qemuarm', '', 'goshimmer', d)}"
+RDEPENDS_packagegroup-honeycomb-iota_remove = "${@bb.utils.contains('MACHINE', 'qemuarm', '', 'goshimmerctl', d)}"
 
 RDEPENDS_packagegroup-honeycomb-cockpit = " \
                                             cockpit \
