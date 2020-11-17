@@ -10,13 +10,11 @@ PACKAGES = " \
              packagegroup-honeycomb-iota \
 "
 
-ROOTFS_MACHINE_BLACKLIST = "stm32mp1-disco"
-
 RDEPENDS_packagegroup-honeycomb-misc = " \
                                        sudo \
                                        useradd-beekeeper \
-                                       ${@bb.utils.contains("MACHINE", "${ROOTFS_MACHINE_BLACKLIST}", "", "swapfile", d)} \
-                                       ${@bb.utils.contains("MACHINE", "${ROOTFS_MACHINE_BLACKLIST}", "", "expand-rootfs", d)} \
+                                       swapfile \
+                                       expand-rootfs \
                                        screen \
                                        tmux \
                                        cronie \
@@ -25,6 +23,13 @@ RDEPENDS_packagegroup-honeycomb-misc = " \
                                        gnupg \
                                        usbutils \
 "
+
+# don't need swapfile nor expand-rootfs
+RDEPENDS_packagegroup-honeycomb-misc_remove = "${@bb.utils.contains('MACHINE', 'stm32mp1-disco', '', 'swapfile expand-rootfs', d)}"
+RDEPENDS_packagegroup-honeycomb-misc_remove = "${@bb.utils.contains('MACHINE', 'qemuarm', '', 'swapfile expand-rootfs', d)}"
+RDEPENDS_packagegroup-honeycomb-misc_remove = "${@bb.utils.contains('MACHINE', 'qemuarm64', '', 'swapfile expand-rootfs', d)}"
+RDEPENDS_packagegroup-honeycomb-misc_remove = "${@bb.utils.contains('MACHINE', 'qemux86', '', 'swapfile expand-rootfs', d)}"
+RDEPENDS_packagegroup-honeycomb-misc_remove = "${@bb.utils.contains('MACHINE', 'qemux86-64', '', 'swapfile expand-rootfs', d)}"
 
 RDEPENDS_packagegroup-honeycomb-networking = " \
                                              net-tools \
@@ -60,17 +65,6 @@ RDEPENDS_packagegroup-honeycomb-iota = " \
                                        honeycomb-package-feeds \
 "
 
-RDEPENDS_packagegroup-honeycomb-iota_remove = "${@bb.utils.contains('MACHINE', 'stm32mp1-disco', '', 'goshimmer', d)}"
-RDEPENDS_packagegroup-honeycomb-iota_remove = "${@bb.utils.contains('MACHINE', 'stm32mp1-disco', '', 'goshimmerctl', d)}"
-RDEPENDS_packagegroup-honeycomb-iota_remove = "${@bb.utils.contains('MACHINE', 'qemuarm', '', 'goshimmer', d)}"
-RDEPENDS_packagegroup-honeycomb-iota_remove = "${@bb.utils.contains('MACHINE', 'qemuarm', '', 'goshimmerctl', d)}"
-
-RDEPENDS_packagegroup-honeycomb-cockpit = " \
-                                            cockpit \
-                                            cockpit-ws \
-                                            cockpit-systemd \
-                                            cockpit-dashboard \
-                                            cockpit-bridge \
-                                            cockpit-pcp \
-                                            honeycomb-cockpit-plugins \
-"
+# GoShimmer is not 32 bit compatible
+RDEPENDS_packagegroup-honeycomb-iota_remove = "${@bb.utils.contains('MACHINE', 'stm32mp1-disco', '', 'goshimmer goshimmerctl', d)}"
+RDEPENDS_packagegroup-honeycomb-iota_remove = "${@bb.utils.contains('MACHINE', 'qemuarm', '', 'goshimmer goshimmerctl', d)}"
