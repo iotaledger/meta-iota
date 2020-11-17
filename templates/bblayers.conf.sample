@@ -29,6 +29,7 @@ IOTA_DEPENDENCY_LAYERS ?= " \
   ${METADIR}/meta-openembedded/meta-networking \
   ${METADIR}/meta-openembedded/meta-python \
   ${METADIR}/meta-openembedded/meta-webserver \
+  ${METADIR}/meta-rust \
 "
 
 # These are the BSP Layers

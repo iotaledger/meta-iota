@@ -25,6 +25,11 @@ then
 	git clone https://github.com/openembedded/meta-openembedded.git -b $BRANCH
 fi
 
+if [ ! -d meta-rust ]
+then
+	git clone https://github.com/meta-rust/meta-rust.git
+fi
+
 if [ ! -d meta-raspberrypi ]
 then
 	git clone https://git.yoctoproject.org/git/meta-raspberrypi.git -b $BRANCH
