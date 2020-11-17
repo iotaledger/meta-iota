@@ -16,5 +16,6 @@ IMAGE_INSTALL_append += "\
                           packagegroup-honeycomb-networking \
                           packagegroup-honeycomb-development \
                           packagegroup-honeycomb-iota \
-                          packagegroup-honeycomb-cockpit \
 "
+
+IMAGE_ROOTFS_MAXSIZE_stm32mp1-disco = "3000000"

@@ -8,14 +8,15 @@ PACKAGES = " \
              packagegroup-honeycomb-networking \
              packagegroup-honeycomb-development \
              packagegroup-honeycomb-iota \
-             packagegroup-honeycomb-cockpit \
 "
+
+ROOTFS_MACHINE_BLACKLIST = "stm32mp1-disco"
 
 RDEPENDS_packagegroup-honeycomb-misc = " \
                                        sudo \
                                        useradd-beekeeper \
-                                       swapfile \
-                                       expand-rootfs \
+                                       ${@bb.utils.contains("MACHINE", "${ROOTFS_MACHINE_BLACKLIST}", "", "swapfile", d)} \
+                                       ${@bb.utils.contains("MACHINE", "${ROOTFS_MACHINE_BLACKLIST}", "", "expand-rootfs", d)} \
                                        screen \
                                        tmux \
                                        cronie \
@@ -49,13 +50,15 @@ RDEPENDS_packagegroup-honeycomb-development += " \
                                         go-runtime \
 "
 
+GOSHIMMER_MACHINE_BLACKLIST = "stm32mp1-disco"
+
 RDEPENDS_packagegroup-honeycomb-iota = " \
                                        seed-gen \
                                        iota-cmder \
                                        hornet \
                                        hornetctl \
-                                       goshimmer \
-                                       goshimmerctl \
+                                       ${@bb.utils.contains("MACHINE", "${GOSHIMMER_MACHINE_BLACKLIST}", "", "goshimmer", d)} \
+                                       ${@bb.utils.contains("MACHINE", "${GOSHIMMER_MACHINE_BLACKLIST}", "", "goshimmerctl", d)} \
                                        honeycomb-package-feeds \
 "
 

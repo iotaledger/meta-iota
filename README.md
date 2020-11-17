@@ -71,7 +71,7 @@ The <a href="https://yoctoproject.org">Yocto</a> / <a href="http://www.openembed
    <td><a href='http://honeycombOS.iota.cafe:8080/job/iota_cmder-genericx86-64/'><img src='http://honeycombOS.iota.cafe:8080/buildStatus/icon?job=iota_cmder-genericx86-64'></a></td>
  </tr>
 </table>
-<p align="center">Note: <a href="https://wiki.yoctoproject.org/wiki/Releases">Yocto Release</a> used in the builds: <b>warrior</b></p>
+<p align="center">Note: <a href="https://wiki.yoctoproject.org/wiki/Releases">Yocto Release</a> used in the builds: <b>dunfell</b></p>
 <br>
 
 ---
@@ -96,24 +96,25 @@ The `meta-tangle` layer depends on:
 
 	URI: git://git.openembedded.org/openembedded-core
 	layers: meta
-	branch: warrior, thud, zeus
+	branch: dunfell
 
 	URI: git://git.openembedded.org/meta-openembedded
 	layers: meta-oe, meta-python, meta-networking
-	branch: warrior, thud, zeus
+	branch: dunfell
 
 The `meta-honeycomb` layer depends on:
 
 	URI: git://git.openembedded.org/openembedded-core
 	layers: meta
-	branch: warrior, thud, zeus
+	branch: dunfell
 
 	URI: git://git.openembedded.org/meta-openembedded
 	layers: meta-oe, meta-python, meta-networking, meta-webserver
-	branch: warrior, thud, zeus
+	branch: dunfell
 
 	URI: git://github.com/bernardoaraujor/meta-iota
 	layers: meta-tangle
+	branch: master
 
 ---
 ## License

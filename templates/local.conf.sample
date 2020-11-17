@@ -1,5 +1,3 @@
-MACHINE ??= "qemux86-64"
-
 DISTRO ?= "honeycomb"
 INHERIT += "rm_work"
 
