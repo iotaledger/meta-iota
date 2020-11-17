@@ -27,7 +27,7 @@ fi
 
 if [ ! -d meta-rust ]
 then
-	git clone https://github.com/meta-rust/meta-rust.git -b $BRANCH
+	git clone https://github.com/meta-rust/meta-rust.git
 fi
 
 if [ ! -d meta-raspberrypi ]
