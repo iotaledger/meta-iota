@@ -277,16 +277,10 @@ SRCREV_FORMAT .= "_iota-streams-ddml"
 SRCREV_iota-streams-ddml = "develop"
 EXTRA_OECARGO_PATHS += "${WORKDIR}/iota-streams-ddml"
 
-# FIXME: update generateme with the real MD5 of the license file
-LIC_FILES_CHKSUM = " \
-    "
+LIC_FILES_CHKSUM = " file://LICENSE;md5=86d3f3a95c324c9479bd8986968f4327"
 
-SUMMARY = "streams-gateway"
+SUMMARY = "streams-http-gateway"
 HOMEPAGE = "https://github.com/iot2tangle/Streams-http-gateway"
-LICENSE = "CLOSED"
+LICENSE = "Apache-2.0"
 
-# includes this file if it exists but does not fail
-# this is useful for anything you may want to override from
-# what cargo-bitbake generates.
-include streams-gateway-${PV}.inc
-include streams-gateway.inc
+include streams-http-gateway-${PV}.inc
