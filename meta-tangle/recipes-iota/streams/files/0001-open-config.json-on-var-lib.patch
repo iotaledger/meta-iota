@@ -1,0 +1,26 @@
+From 124a843a5f44058e2a757a16bd5093fb2f2fd7d8 Mon Sep 17 00:00:00 2001
+From: "Bernardo A. Rodrigues" <bernardoaraujor@gmail.com>
+Date: Wed, 18 Nov 2020 15:11:37 +0100
+Subject: [PATCH] open config.json on /var/lib
+
+---
+ src/main.rs | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/main.rs b/src/main.rs
+index 61898b2..41a115a 100644
+--- a/src/main.rs
++++ b/src/main.rs
+@@ -9,7 +9,8 @@ use std::sync::{Arc, Mutex};
+ #[tokio::main]
+ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
+     //read configuration file
+-    let config: Config = serde_json::from_reader(File::open("config.json").unwrap()).unwrap();
++    let config_path: &'static str = "/var/lib/streams-http-gateway/config.json";
++    let config: Config = serde_json::from_reader(File::open(config_path).unwrap()).unwrap();
+ 
+     let store = KeyManager::new(config.whitelisted_device_ids.clone());
+ 
+-- 
+2.17.1
+
