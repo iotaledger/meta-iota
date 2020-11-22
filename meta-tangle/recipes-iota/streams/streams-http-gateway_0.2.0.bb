@@ -290,6 +290,6 @@ SRC_URI += " \
 
 do_install_append() {
     install -d ${D}${localstatedir}/lib/streams-http-gateway
-    install -m 0644 ${S}/config.json ${D}${localstatedir}/lib/streams-http-gateway
-    install -m 0644 ${S}/src/device_auth/keystore.json ${D}${localstatedir}/lib/streams-http-gateway
+    install -m 0666 ${S}/config.json ${D}${localstatedir}/lib/streams-http-gateway
+    install -m 0666 ${S}/src/device_auth/keystore.json ${D}${localstatedir}/lib/streams-http-gateway
 }
