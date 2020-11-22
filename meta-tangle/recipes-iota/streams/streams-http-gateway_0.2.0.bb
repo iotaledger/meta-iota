@@ -283,9 +283,13 @@ SUMMARY = "streams-http-gateway"
 HOMEPAGE = "https://github.com/iot2tangle/Streams-http-gateway"
 LICENSE = "Apache-2.0"
 
-SRC_URI += " file://0001-open-config.json-on-var-lib.patch"
+SRC_URI += " \
+             file://0001-open-config.json-on-var-lib.patch \
+             file://0002-fix-keystore-path.patch  \
+             "
 
 do_install_append() {
     install -d ${D}${localstatedir}/lib/streams-http-gateway
     install -m 0644 ${S}/config.json ${D}${localstatedir}/lib/streams-http-gateway
+    install -m 0644 ${S}/src/device_auth/keystore.json ${D}${localstatedir}/lib/streams-http-gateway
 }
