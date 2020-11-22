@@ -21,4 +21,6 @@ DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
 PACKAGE_CLASSES = "package_deb"
 
 INHERIT += "extrausers"
-EXTRA_USERS_PARAMS = "usermod -P tangleisawesome root;"
+
+DENYLIST_usermod = "qemuarm qemuarm64 qemux86 qemux86-64 genericx86 genericx86-64 "
+EXTRA_USERS_PARAMS = "${@bb.utils.contains('DENYLIST_usermod', 'MACHINE', 'usermod -P tangleisawesome root;', '', d)}"

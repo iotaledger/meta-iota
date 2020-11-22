@@ -24,12 +24,11 @@ RDEPENDS_packagegroup-honeycomb-misc = " \
                                        usbutils \
 "
 
-# don't need swapfile nor expand-rootfs
-RDEPENDS_packagegroup-honeycomb-misc_remove = "${@bb.utils.contains('MACHINE', 'stm32mp1-disco', '', 'swapfile expand-rootfs', d)}"
-RDEPENDS_packagegroup-honeycomb-misc_remove = "${@bb.utils.contains('MACHINE', 'qemuarm', '', 'swapfile expand-rootfs', d)}"
-RDEPENDS_packagegroup-honeycomb-misc_remove = "${@bb.utils.contains('MACHINE', 'qemuarm64', '', 'swapfile expand-rootfs', d)}"
-RDEPENDS_packagegroup-honeycomb-misc_remove = "${@bb.utils.contains('MACHINE', 'qemux86', '', 'swapfile expand-rootfs', d)}"
-RDEPENDS_packagegroup-honeycomb-misc_remove = "${@bb.utils.contains('MACHINE', 'qemux86-64', '', 'swapfile expand-rootfs', d)}"
+DENYLIST_swapfile = "qemuarm qemuarm64 qemux86 qemux86-64 genericx86 genericx86-64 "
+RDEPENDS_packagegroup-honeycomb-misc_remove = "${@bb.utils.contains('DENYLIST_swapfile', 'MACHINE', 'swapfile', '', d)}"
+
+DENYLIST_expand-rootfs = "qemuarm qemuarm64 qemux86 qemux86-64 stm32mp1-eval stm32mp1-disco "
+RDEPENDS_packagegroup-honeycomb-misc_remove = "${@bb.utils.contains('DENYLIST_expand-rootfs', 'MACHINE', 'expand-rootfs', '', d)}"
 
 RDEPENDS_packagegroup-honeycomb-networking = " \
                                              net-tools \
