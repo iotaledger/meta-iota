@@ -4,10 +4,15 @@ inherit packagegroup
 
 PROVIDES = "${PACKAGES}"
 PACKAGES = " \
+             packagegroup-honeycomb-graphics \
              packagegroup-honeycomb-misc \
              packagegroup-honeycomb-networking \
              packagegroup-honeycomb-development \
              packagegroup-honeycomb-iota \
+"
+
+RDEPENDS_packagegroup-honeycomb-graphics = " \
+             raspihive \
 "
 
 RDEPENDS_packagegroup-honeycomb-misc = " \
