@@ -8,7 +8,7 @@ inherit cargo
 # how to get streams-gateway could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/streams-gateway/0.2.0"
 SRC_URI += "git://git@github.com/honeycombOS/Streams-http-gateway;protocol=https;nobranch=1"
-SRCREV = "ddd4c610666f003317ff2cf1c1997cadf69870bb"
+SRCREV = "6c70a12e338cde115422674ca90eea573be9a6a5"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
 PV_append = ".AUTOINC+ddd4c61066"
@@ -20,6 +20,7 @@ SRC_URI += " \
     crate://crates.io/adler/0.2.3 \
     crate://crates.io/ahash/0.3.8 \
     crate://crates.io/anyhow/1.0.33 \
+    crate://crates.io/anyhow/1.0.34 \
     crate://crates.io/arc-swap/0.4.7 \
     crate://crates.io/async-channel/1.5.1 \
     crate://crates.io/async-task/3.0.0 \
@@ -49,6 +50,8 @@ SRC_URI += " \
     crate://crates.io/cookie_store/0.12.0 \
     crate://crates.io/cpuid-bool/0.1.2 \
     crate://crates.io/crunchy/0.2.2 \
+    crate://crates.io/cstr_core/0.2.2 \
+    crate://crates.io/cty/0.2.1 \
     crate://crates.io/curve25519-dalek/3.0.0 \
     crate://crates.io/digest/0.9.0 \
     crate://crates.io/discard/1.0.4 \
@@ -73,6 +76,7 @@ SRC_URI += " \
     crate://crates.io/gcc/0.3.55 \
     crate://crates.io/generic-array/0.14.4 \
     crate://crates.io/getrandom/0.1.15 \
+    crate://crates.io/getrandom/0.2.0 \
     crate://crates.io/gimli/0.22.0 \
     crate://crates.io/h2/0.2.7 \
     crate://crates.io/hashbrown/0.8.2 \
@@ -128,11 +132,15 @@ SRC_URI += " \
     crate://crates.io/rand/0.3.23 \
     crate://crates.io/rand/0.4.6 \
     crate://crates.io/rand/0.7.3 \
+    crate://crates.io/rand/0.8.0 \
     crate://crates.io/rand_chacha/0.2.2 \
+    crate://crates.io/rand_chacha/0.3.0 \
     crate://crates.io/rand_core/0.3.1 \
     crate://crates.io/rand_core/0.4.2 \
     crate://crates.io/rand_core/0.5.1 \
+    crate://crates.io/rand_core/0.6.0 \
     crate://crates.io/rand_hc/0.2.0 \
+    crate://crates.io/rand_hc/0.3.0 \
     crate://crates.io/rdrand/0.4.0 \
     crate://crates.io/redox_syscall/0.1.57 \
     crate://crates.io/regex-syntax/0.6.20 \
@@ -168,8 +176,9 @@ SRC_URI += " \
     crate://crates.io/subtle/2.3.0 \
     crate://crates.io/syn/1.0.48 \
     crate://crates.io/synstructure/0.12.4 \
-    crate://crates.io/thiserror-impl/1.0.21 \
+    crate://crates.io/thiserror-impl/1.0.22 \
     crate://crates.io/thiserror/1.0.21 \
+    crate://crates.io/thiserror/1.0.22 \
     crate://crates.io/time-macros-impl/0.1.1 \
     crate://crates.io/time-macros/0.1.1 \
     crate://crates.io/time/0.1.44 \
